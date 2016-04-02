@@ -81,6 +81,8 @@ function compile_app() {
   mix compile --force || exit 1
   mix compile.protocols || exit 1
 
+  mix release || exit 1
+
   export GIT_DIR=$git_dir_value
   cd - > /dev/null
 }
